@@ -19,9 +19,7 @@ const Message = ({ item }) => {
         referrerPolicy="no-referrer"
       />
       <div className="flex flex-col gap-1 w-full">
-        <span className="font-semibold">
-          {item.author.name === "Wolf attack" ? "Özgür Kocero" : "Ömer Altun"}
-        </span>
+        <span className="font-semibold">{item.author.name}</span>
         <p className="text-zinc-800 bg-zinc-200 message rounded-[0_7px_7px_7px]">
           {item.text}
         </p>
