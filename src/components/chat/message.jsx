@@ -12,9 +12,16 @@ const Message = ({ item }) => {
   // eğer mesajı başka bir kullanıcı attıysa
   return (
     <div className="flex items-start gap-1">
-      <img src={item.author.photo} alt="" className="size-10 rounded-full" />
+      <img
+        src={item.author.photo}
+        alt=""
+        className="size-10 rounded-full"
+        referrerPolicy="no-referrer"
+      />
       <div className="flex flex-col gap-1 w-full">
-        <span className="font-semibold">{item.author.name}</span>
+        <span className="font-semibold">
+          {item.author.name === "Wolf attack" ? "Özgür Kocero" : "Ömer Altun"}
+        </span>
         <p className="text-zinc-800 bg-zinc-200 message rounded-[0_7px_7px_7px]">
           {item.text}
         </p>

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+// user?.displayName
 
 const Head = ({ user, room }) => {
   return (
     <div className="flex justify-between items-center p-5 border border-gray-200 shadow-lg ">
       <p className="font-semibold">
-        {user?.displayName == "omer altun" ? "Ömer ALTUN" : user?.displayName}
+        {user?.displayName == "omer altun" ? "Ömer ALTUN" : "Özgür Kocero"}
       </p>
       <p>{room}</p>
       <Link to="/" className="btn">

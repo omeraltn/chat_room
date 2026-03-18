@@ -12,6 +12,10 @@ const Form = ({ user, room }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // formu sıfırla
+    setText("");
+    setIsOpen(false);
+
     //mesajın kaydedileceği kolleksiyonun referansını al
     const collectionRef = collection(db, "messages");
 
@@ -27,8 +31,6 @@ const Form = ({ user, room }) => {
 
       createdAt: serverTimestamp(),
     });
-    // formu sıfırla
-    setText("");
   };
 
   //emojiye tiklanınca
